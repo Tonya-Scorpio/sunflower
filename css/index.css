@@ -1,0 +1,56 @@
+body {
+    font-size: 100%;
+    font-family: Arial;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    paddin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.blur {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url('../image/P1030219.JPG') no-repeat;
+    -webkit-filter: blur(70px);
+    -moz-filter: blur(70px);
+    filter: blur(70px);
+    background-size: cover;
+}
+
+.container {
+    width: 70%;
+    height: 80%;
+    color: white;
+    background: url('../image/P1030219.JPG') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {}
+
+a:hover {}
+
+a:focus {}
+
+a:active {}

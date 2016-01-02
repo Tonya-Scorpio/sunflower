@@ -25,10 +25,10 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: url('../image/P1030219.JPG') no-repeat;
-    -webkit-filter: blur(70px);
+    background: url('../image/blurred(1).jpg') no-repeat;
+    /*-webkit-filter: blur(70px);
     -moz-filter: blur(70px);
-    filter: blur(70px);
+    filter: blur(70px);*/
     background-size: cover;
 }
 
@@ -38,8 +38,6 @@ body {
     color: white;
     background: url('../image/P1030219.JPG') no-repeat center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
     margin: 0 auto;
 }
 
@@ -47,10 +45,15 @@ a:link {
     color: green;
 }
 
-a:visited {}
+.days {
+    display: flex;
+    justify-content: space-around;
+    ;
+    margin-bottom: 5px;
+}
 
-a:hover {}
-
-a:focus {}
-
-a:active {}
+.days div {
+    height: 200px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+}

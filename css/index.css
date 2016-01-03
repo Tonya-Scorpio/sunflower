@@ -5,11 +5,8 @@ body {
 
 html,
 body,
-h1,
-h2,
-h3,
-h4,
-p {
+h1{
+ 
     margin: 0;
     paddin: 0;
 }
@@ -41,19 +38,19 @@ body {
     margin: 0 auto;
 }
 
-a:link {
-    color: green;
+a {
+    color: white;
+    margin-top: 500px;
+    margin-left: 50px;
 }
 
 .days {
     display: flex;
-    justify-content: space-around;
-    ;
-    margin-bottom: 5px;
+    flex-grow:1;
+    margin-top: 500px; 
+    margin-left: 20px;   
 }
-
-.days div {
-    height: 200px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.25);
+.days div {    
+    height: 10%;
+    width: 15%;
 }

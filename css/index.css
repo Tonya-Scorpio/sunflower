@@ -5,8 +5,7 @@ body {
 
 html,
 body,
-h1{
- 
+h1 {
     margin: 0;
     paddin: 0;
 }
@@ -15,6 +14,10 @@ html,
 body {
     height: 100%;
     width: 100%;
+}
+
+html {
+    display: flex;
 }
 
 .blur {
@@ -38,6 +41,14 @@ body {
     margin: 0 auto;
 }
 
+.today {
+    background: white;
+    position: absolute;
+    margin-left: 100px;
+    width: 10%;
+    height: 30%;
+}
+
 a {
     color: white;
     margin-top: 500px;
@@ -46,11 +57,13 @@ a {
 
 .days {
     display: flex;
-    flex-grow:1;
-    margin-top: 500px; 
-    margin-left: 20px;   
+    flex-grow: 1;
+    margin-top: 500px;
+    margin-left: 20px;
+    margin-bottom: 200px;
 }
-.days div {    
+
+.days div {
     height: 10%;
     width: 15%;
 }

@@ -7,17 +7,13 @@ html,
 body,
 h1 {
     margin: 0;
-    paddin: 0;
+    padding: 0;
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
-}
-
-html {
-    display: flex;
 }
 
 .blur {
@@ -47,6 +43,7 @@ html {
     margin-left: 100px;
     width: 10%;
     height: 30%;
+    margin: 0 auto;
 }
 
 a {
@@ -67,3 +64,12 @@ a {
     height: 10%;
     width: 15%;
 }
+
+
+/*Температура, C
+відчувається як
+Тиск, мм
+Вологість, %
+Вітер, м/сек
+Ймовірність
+опадів, %/

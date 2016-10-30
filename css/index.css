@@ -7,7 +7,7 @@ html,
 body,
 h1 {
     margin: 0;
-    paddin: 0;
+    padding: 0;
 }
 
 html,
@@ -18,6 +18,10 @@ body {
 
 html {
     display: flex;
+}
+
+a {
+    color: white;
 }
 
 .blur {
@@ -32,38 +36,63 @@ html {
     background-size: cover;
 }
 
-.container {
+.container, .days {
     width: 70%;
+    margin: 0 auto;
+}
+
+.container {    
     height: 80%;
     color: white;
     background: url('../image/P1030219.JPG') no-repeat center;
-    background-size: cover;
-    margin: 0 auto;
+    background-size: cover;    
 }
 
 .today {
     background: white;
     position: absolute;
-    margin-left: 100px;
-    width: 10%;
-    height: 30%;
+    margin-left: 300px;
+    margin-top: 180px;
+    width: auto;
+    height: auto;   
+    overflow: hidden; 
+    transition: all 0.5s;        
 }
 
-a {
-    color: white;
-    margin-top: 500px;
-    margin-left: 50px;
+.today.hidden {
+    height: 0;    
+}
+
+.today.expanded {
+    height: 200px;
+}
+
+.city {
+    padding-left: 50px;
 }
 
 .days {
     display: flex;
-    flex-grow: 1;
-    margin-top: 500px;
-    margin-left: 20px;
-    margin-bottom: 200px;
+    height: 20%;
 }
 
-.days div {
-    height: 10%;
+.days .day {
+    height: 100%;
     width: 15%;
+    text-align: center;
+}
+
+.days .day .link {
+    display: block;
+    height: 100%;
+}
+
+.temperature,
+.pressure,
+.hamidity,
+.wind,
+.probability {
+    display: flex;
+    color: black;
+    justify-content: space-between;
 }

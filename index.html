@@ -3,48 +3,55 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
 </head>
 
 <body>
     <div class="blur"></div>
+    
     <div class="container">
-        <h1><a href="info.html">БУХАРЕСТ</a> </h1>
-        <div class="today">
-            <div class="temperature parameter ">Температура,С</div>
-            <div class="temperature value">1-5</div>
-            <div class="pressure parameter ">Тиск,мм</div>
-            <div class="pressure  value">755</div>
-        </div>
-        <div class="line">
-            <div class="day 1">5-9</div>
-            <div class="temperature">+28-29 C</div>
-            <i class="wi wi-cloudy"></i>
-        </div>
-        <div class="line">
-            <div class="day 2">10-15</div>
-            <div class="temperature">+29-31 C</div>
-            <i class="wi wi-day-rain"></i>
+        <h1 class="city"><a class="link" href="info.html">БУХАРЕСТ</a></h1>
+        <div class="today hidden" id="today">
+            <div class="temperature">
+                <div class="parameter">Температура, С</div>
+                <div class="value">+10 +15 C </div>
+            </div>
+            <div class="pressure">
+                <div class=" parameter">Тиск,мм </div>
+                <div class=" value">725</div>
+            </div>
+            <div class="hamidity">
+                <div class="parameter">Вологість, %</div>
+                <div class=" value">86</div>
+            </div>
+            <div class="wind">
+                <div class="parameter">Вітер, м/сек</div>
+                <div class=" value">86</div>
+            </div>
+            <div class="probability">
+                <div class="parameter">Ймовірність опадів, %</div>
+                <div class=" value">20</div>
+            </div>
         </div>
     </div>
+
     <div class="days">
         <!-- Sunday -->
-        <div>Sd</div>
+        <div class="day"><a class="link" href="today">Sd</a></div>
         <!-- Monday -->
-        <div>Mn</div>
+        <div class="day"><a class="link" href="info.html">Mn</a></div>
         <!-- Thuesday -->
-        <div>Th</div>
+        <div class="day"><a class="link" href="info.html">Th</a></div>
         <!-- Wednesday -->
-        <div>Wd</div>
+        <div class="day"><a class="link" href="info.html">Wd</a></div>
         <!-- Thursday -->
-        <div>Thd</div>
+        <div class="day"><a class="link" href="info.html">Thd</a></div>
         <!-- Fraiday -->
-        <div>Fr</div>
+        <div class="day"><a class="link" href="info.html">Fr</a></div>
         <!-- Sutarday -->
-        <div>St</div>
+        <div class="day"><a class="link" href="info.html">St</a></div>
     </div>
-    </div>
-    <script src="js/jquery-2.2.0.min.js"></script>
+
     <script src="js/main.js" async defer></script>
 </body>
 

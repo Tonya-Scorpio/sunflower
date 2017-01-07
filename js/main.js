@@ -3,8 +3,7 @@ var today = document.getElementById("today");
 
 function loadDay(day) {
     switch (day) {
-    default:
-        break;
+        default: break;
     }
 }
 

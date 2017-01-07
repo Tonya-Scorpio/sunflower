@@ -36,31 +36,42 @@ a {
     background-size: cover;
 }
 
-.container, .days {
+.container,
+.days {
     width: 70%;
     margin: 0 auto;
 }
 
-.container {    
+.container {
     height: 80%;
     color: white;
     background: url('../image/P1030219.JPG') no-repeat center;
-    background-size: cover;    
+    background-size: cover;
+    margin-bottom: 20px;
 }
 
 .today {
-    background: white;
+    background: #f56861;
     position: absolute;
     margin-left: 300px;
-    margin-top: 180px;
+    margin-top: 200px;
     width: auto;
-    height: auto;   
-    overflow: hidden; 
-    transition: all 0.5s;        
+    height: auto;
+    overflow: hidden;
+    transition-duration: 500ms;
+    opacity: 0.75;
+}
+
+.items {
+    height: auto;
+    margin:  auto;
+    width: auto;
+    margin-top: 17%;
 }
 
 .today.hidden {
-    height: 0;    
+    height: 0;
+    width: 15%;
 }
 
 .today.expanded {
@@ -95,4 +106,12 @@ a {
     display: flex;
     color: black;
     justify-content: space-between;
+    color: white;
+    margin-top: 6px;
+    margin-left: 2px;
 }
+   
+  .value{
+    width: auto;
+    margin-right: 5px;
+ }

@@ -20,3 +20,7 @@ if (days && days.length > 0) {
         link.onclick = onItemClicked;
     }
 }
+
+today.onclick = function() {
+    today.classList.remove('expanded'); 
+};

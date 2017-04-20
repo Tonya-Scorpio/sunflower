@@ -3,37 +3,78 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/weather-icons.css">
     <meta charset="utf-8">
+    <!--
+    <script src="api.openweathermap.org/data/2.5/weather?q=Vinnitsa,ua"></script>-->
 </head>
 
 <body>
     <div class="blur"></div>
-    <div class="container">
-        <h1 class="city"><a class="link" href="info.html">БУХАРЕСТ</a></h1>
-        <div class="today hidden" id="today">
-            <div class="items">
-                <div class="temperature">
-                    <div class="parameter">Температура,С</div>
-                    <div class="night one"></div>
-                    <div class="value">+10 +15</div>
+    <div class="container" id="vue-app">
+        <!--<div>
+		<select>
+			<option>Buharest</option>
+		</select>
+	</div>-->
+        <h1 class="city" id="vue-app1">
+		<a class="link" href="info.html">{{ selectedCity }}</a>
+	</h1>
+        <div class="today" id="today">
+            <div class="smart picture">
+                <span class="filter"></span>
+                <!--	<img width="100" height="120" src="d300.jpg" >--><img width="95%" height="150" src="image/d300.jpg">
+            </div>
+            <div class="therm2">
+                <span class="scale-fill"></span>
+                <div class="scale real" id="scale">
+                    <!--
+				<div class="dashe">
+					<hr align="center" width="500" size="5" color="#ff0000" />
+					<span class="number">40</span>
+				</div>
+			-->
                 </div>
-                <div class="pressure">
-                    <div class=" parameter">Тиск,мм </div>
-                    <div class=" value">725</div>
+                <div class="circle"></div>
+            </div>
+            <div class="parameter">
+                <div class="temperature">Температура,С</div>
+                <div class="pressure">Тиск,мм </div>
+                <div class="hamidity">Вологість,%</div>
+                <div class="wind">Вітер,м/сек</div>
+                <div class="probability">Ймовірність опадів,%</div>
+            </div>
+            <!-- Part start -->
+            <div class="weather-table night" v-for="part in parts">
+                <div class="name">
+                    <span>{{ part.name }}</span>
                 </div>
-                <div class="hamidity">
-                    <div class="parameter">Вологість,%</div>
-                    <div class=" value">86</div>
-                </div>
-                <div class="wind">
-                    <div class="parameter">Вітер,м/сек</div>
-                    <div class=" value">86</div>
-                </div>
-                <div class="probability">
-                    <div class="parameter">Ймовірність опадів,%</div>
-                    <div class=" value">20</div>
+                <div class="ok">
+                    <div class="box">
+                        <div class="time">2.00</div>
+                        <i class="wi wi-day-sleet"></i>
+                        <div class="entries">
+                            <div class="entry temperature">+10 +15</div>
+                            <div class="entry pressure">725</div>
+                            <div class="entry humidity">75</div>
+                            <div class="entry windSpeed">75</div>
+                            <div class="entry probability">75</div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="time">5.00</div>
+                        <i class="wi wi-cloudy"></i>
+                        <div class="entries">
+                            <div class="entry temperature">+10 +15</div>
+                            <div class="entry pressure">725</div>
+                            <div class="entry humidity">75</div>
+                            <div class="entry windSpeed">75</div>
+                            <div class="entry probability">75</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- Part end -->
         </div>
     </div>
     <div class="days">
@@ -52,7 +93,11 @@
         <!-- Sutarday -->
         <div class="day"><a class="link" href="info.html">St</a></div>
     </div>
-    <script src="js/main.js" async defer></script>
-</body>
+    <!--
+<script type="text/javascript" src="js/main.js"></script> 
+-->
+    <!-- Vue stuff -->
+    <script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
 </html>

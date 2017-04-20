@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
 body {
     font-size: 100%;
     font-family: Arial;
@@ -38,7 +46,7 @@ a {
 
 .container,
 .days {
-    width: 70%;
+    width:auto;
     margin: 0 auto;
 }
 
@@ -50,32 +58,44 @@ a {
     margin-bottom: 20px;
 }
 
-.today {
+.smart.picture img,
+.filter {
+     width:100;
+     height:120;}
+
+.smart.picture{ 
+     position: relative;
+     opacity: 1;
+     margin-left:5px; 
+     margin-right: 5px; 
+     display: inline-block;
+
+     /*position: relative; 
+     z-index: 1;*/
+}
+
+.today  {
     background: #f56861;
     position: absolute;
-    margin-left: 300px;
+    align-items: flex-end;
+    margin-left: 50px; 
     margin-top: 200px;
+
     width: auto;
     height: auto;
     overflow: hidden;
-    transition-duration: 500ms;
+    transition-duration: 2s;
     opacity: 0.75;
+    display: flex;
 }
-
-.items {
-    height: auto;
-    margin:  auto;
-    width: auto;
-    margin-top: 17%;
-}
-
+ 
 .today.hidden {
     height: 0;
-    width: 15%;
+    width: auto;
 }
 
 .today.expanded {
-    height: 200px;
+    height: auto;
 }
 
 .city {
@@ -84,7 +104,8 @@ a {
 
 .days {
     display: flex;
-    height: 20%;
+     
+    margin-top: 55px;
 }
 
 .days .day {
@@ -95,23 +116,150 @@ a {
 
 .days .day .link {
     display: block;
-    height: 100%;
+    height: 80%;
+}
+
+ /* Properties table */
+
+ .weather-table {
+  display:  flex;
+  flex-direction: column;
+ }
+ 
+.weather-table .box { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.weather-table .box:nth-child(2) {
+  margin-left: 20px;
+}
+
+.time {
+    text-align: center;
+   
+    margin:auto; 
+    font-size: 1em;
+}
+
+.name{ 
+     text-align: center;
+     margin-top: 7px;
+ }
+
+ .name span {
+
+      
+ }
+
+i{         
+     margin-bottom: 7px;
+     text-align: center;
+     margin-top: 7px; 
+     background-color: #c64039;
+}
+         
+.ok{
+    display:flex;
+    height: auto;
+    margin:auto;
+} 
+
+.entry{
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 5px;
 }
 
 .temperature,
 .pressure,
 .hamidity,
-.wind,
-.probability {
-    display: flex;
-    color: black;
-    justify-content: space-between;
-    color: white;
-    margin-top: 6px;
-    margin-left: 2px;
+.wind{
+ margin-bottom: 5px;   
 }
-   
-  .value{
-    width: auto;
-    margin-right: 5px;
- }
+
+
+.probability{
+    margin-bottom: 10px;
+
+}
+
+.weather-table {
+margin-right: 30px; 
+}
+ 
+ .filter {
+  top: 0px;
+  left: 0px;
+  /* Принудительно размещаем фильтр прямо над изображением. */
+  z-index: 1;
+  /* Фильтр расположен на один уровень выше изображения. */
+  position: absolute;
+  /* Абсолютно позиционированный элемент. Поскольку позиционирование родителя задано как relative, позиция фильтра задаётся относительно края родителя. */
+  background-color: red;
+  /* Первые три числа -- десятичное значение цвета в RGB, четвёртое -- прозрачность, в сотых, от 0 (полностью прозрачен) до 1 (полностью непрозрачен). Запись .29 аналогична 0.29. */
+}
+/*.therm {
+
+    background: url('../image/temp1.png') no-repeat  ;
+    font-size: 0;
+    height: 95px;
+    left: 21px;
+    line-height: 0;
+    top: 34px;
+    width: 34px;
+}*/
+
+.therm2 {
+    width: 6px;
+    height: 100px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 2px; 
+    right: 170px;
+    bottom: 30px;
+    border-radius: 5px;
+}
+  
+
+
+.therm2 .scale-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+    background: red;
+    height: calc(50% + 30px);
+}
+
+ .circle { 
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 1px  black;
+    bottom: -2px;
+    left:   -3px;
+}
+
+.scale {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space-around;
+
+}
+
+.dashe{
+    display: flex;
+     }
+
+
+.number{ 
+    margin-left: 3px;
+    font-size: 0.8em;
+    color:#2B92E1;
+}
+    
